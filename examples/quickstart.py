@@ -7,9 +7,7 @@ import game_collecting
 
 
 def main():
-    print(
-        f"game_collecting version: {game_collecting.__version__}"
-    )
+    print(f"game_collecting version: {game_collecting.__version__}")
 
 
 if __name__ == "__main__":
