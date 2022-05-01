@@ -9,25 +9,25 @@ base_package = "game_collecting"
 base_path = os.path.dirname(__file__)
 
 init_file = os.path.join(base_path, "game_collecting", "__init__.py")
-with open(init_file, "r") as f:
+with open(init_file, "r", encoding="utf-8") as f:
     module_content = f.read()
 
     match = regexp.match(module_content)
     if match:
         version = match.group(1)
     else:
-        raise RuntimeError("Cannot find __version__ in {}".format(init_file))
+        raise RuntimeError(f"Cannot find __version__ in {init_file}")
 
-with open("README.rst", "r") as f:
+with open("README.rst", "r", encoding="utf-8") as f:
     readme = f.read()
 
-with open("CHANGELOG.rst", "r") as f:
+with open("CHANGELOG.rst", "r", encoding="utf-8") as f:
     changes = f.read()
 
 
 def parse_requirements(filename):
     """Load requirements from a pip requirements file"""
-    with open(filename, "r") as fd:
+    with open(filename, "r", encoding="utf-8") as fd:
         lines = []
         for line in fd:
             line.strip()
