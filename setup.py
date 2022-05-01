@@ -8,7 +8,7 @@ regexp = re.compile(r".*__version__ = [\'\"](.*?)[\'\"]", re.S)
 base_package = "game_collecting"
 base_path = os.path.dirname(__file__)
 
-init_file = os.path.join(base_path, "src", "game_collecting", "__init__.py")
+init_file = os.path.join(base_path, "game_collecting", "__init__.py")
 with open(init_file, "r") as f:
     module_content = f.read()
 
@@ -36,7 +36,7 @@ def parse_requirements(filename):
     return lines
 
 
-requirements = parse_requirements("requirements.txt")
+requirements = parse_requirements("game_collecting/requirements.txt")
 
 
 if __name__ == "__main__":
@@ -53,8 +53,8 @@ if __name__ == "__main__":
         maintainer_email="abolte@systemsaviour.com",
         install_requires=requirements,
         keywords=["game_collecting"],
-        package_dir={"": "src"},
-        packages=find_packages("src"),
+        package_dir={"": "."},
+        packages=find_packages("."),
         zip_safe=False,
         classifiers=[
             "Development Status :: 2 - Pre-Alpha",
