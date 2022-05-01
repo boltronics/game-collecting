@@ -43,7 +43,7 @@ if __name__ == '__main__':
         name='game_collecting',
         description='The ultimate game collecting manager.',
         long_description='\n\n'.join([readme, changes]),
-        license='GNU General Public License v3',
+        license='GNU Affero General Public License v3',
         url='https://github.com/boltronics/game-collecting',
         version=version,
         author='Adam Bolte',
