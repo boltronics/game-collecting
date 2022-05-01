@@ -55,9 +55,11 @@ if __name__ == '__main__':
         package_dir={'': 'src'},
         packages=find_packages('src'),
         zip_safe=False,
-        classifiers=['Development Status :: 3 - Alpha',
-                     'Intended Audience :: Developers',
-                     'Programming Language :: Python :: 3.6',
-                     'Programming Language :: Python :: 3.7',
-                     'Programming Language :: Python :: 3.8']
+        classifiers=['Development Status :: 2 - Pre-Alpha',
+                     'Intended Audience :: End Users/Desktop',
+                     'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
+                     'Programming Language :: Python :: 3.8',
+                     'Programming Language :: Python :: 3.9',
+                     'Programming Language :: Python :: 3.10'
+                     'Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Content Management System']
     )
